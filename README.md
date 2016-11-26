@@ -47,20 +47,3 @@ Yii::setAlias('@storageUrl','/frontend/web/images');
         //..
     ]
 ```
-
-В секцию components:
-
-```
-    'components' => [
-        //..
-        'fileStorage' => [
-            'class' => '\trntv\filekit\Storage',
-            'baseUrl' => '@storageUrl/source',
-            'filesystem'=> function() {
-                $adapter = new \League\Flysystem\Adapter\Local(dirname(dirname(__DIR__)).'/frontend/web/images/source');
-                return new League\Flysystem\Filesystem($adapter);
-            },
-        ],
-        //..
-    ]
-```
