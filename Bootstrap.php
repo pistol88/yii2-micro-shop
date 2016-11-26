@@ -1,5 +1,5 @@
 <?php
-namespace pistol88\shop;
+namespace pistol88\microshop;
 
 use yii\base\BootstrapInterface;
 use yii;
