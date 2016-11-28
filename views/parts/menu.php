@@ -6,15 +6,15 @@ use yii\bootstrap\Nav;
         'items' => [
             [
                 'label' => 'Товары',
-                'url' => ['/shop/product/index'],
+                'url' => ['/microshop/product/index'],
             ],
             [
                 'label' => 'Категории',
-                'url' => ['/shop/category/index'],
+                'url' => ['/microshop/category/index'],
             ],
             [
                 'label' => 'Поступление',
-                'url' => ['/shop/incoming/index'],
+                'url' => ['/microshop/incoming/index'],
             ]
         ],
         'options' => ['class' =>'nav-pills'],

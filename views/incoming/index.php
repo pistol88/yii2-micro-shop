@@ -57,7 +57,7 @@ $this->registerJs(
                         ]); ?>
                     </div>
                 </div>
-                <div class="col-lg-6"><input class="new-input" data-info-service="<?=Url::toRoute(['/shop/product/product-info']);?>" type="text" value="" placeholder="Код или артикул + Enter" style="width: 300px;" /></div>
+                <div class="col-lg-6"><input class="new-input" data-info-service="<?=Url::toRoute(['/microshop/product/product-info']);?>" type="text" value="" placeholder="Код или артикул + Enter" style="width: 300px;" /></div>
             </div>
         </div>
         <div id="incoming-list" style="width: 800px;">

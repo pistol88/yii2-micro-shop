@@ -33,7 +33,7 @@ Yii::setAlias('@storageUrl','/frontend/web/images');
 ```
     'modules' => [
         //..
-        'shop' => [
+        'microshop' => [
             'class' => 'pistol88\microshop\Module',
             'adminRoles' => ['administrator'],
         ],
