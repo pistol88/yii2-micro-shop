@@ -18,10 +18,13 @@ use kartik\select2\Select2;
         <div class="col-lg-6 col-xs-6">
             <?= $form->field($model, 'name')->textInput() ?>
         </div>
-        <div class="col-lg-3 col-xs-3">
+        <div class="col-lg-2 col-xs-6">
+            <?= $form->field($model, 'code')->textInput() ?>
+        </div>
+        <div class="col-lg-2 col-xs-6">
             <?= $form->field($model, 'amount')->textInput() ?>
         </div>
-        <div class="col-lg-3 col-xs-3">
+        <div class="col-lg-2 col-xs-6">
             <?= $form->field($model, 'price')->textInput() ?>
         </div>
     </div>
