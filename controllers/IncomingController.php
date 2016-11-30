@@ -5,8 +5,10 @@ namespace pistol88\microshop\controllers;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\helpers\Html;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use pistol88\microshop\models\incoming\IncomingSearch;
 use pistol88\microshop\models\Incoming;
 use pistol88\microshop\models\Product;
 
@@ -36,6 +38,19 @@ class IncomingController extends Controller
 
     public function actionIndex()
     {
+        $searchModel = new IncomingSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        $dataProvider->query->orderBy('id DESC');
+        
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+    
+    public function actionCreate()
+    {
         $model = new Incoming;
 
         if ($post = Yii::$app->request->post()) {
@@ -45,6 +60,7 @@ class IncomingController extends Controller
             foreach($post['element'] as $id => $count) {
                 $model = new Incoming;
                 $model->date = time();
+                $model->content = Html::encode(yii::$app->request->post('content'));
                 $model->amount = $count;
                 
                 if($product = $productModel::findOne($id)) {
@@ -62,9 +78,9 @@ class IncomingController extends Controller
                 }
             }
 
-            return $this->redirect(['index', 'id' => $model->id]);
+            return $this->redirect(['create', 'id' => $model->id]);
         } else {
-            return $this->render('index', [
+            return $this->render('create', [
                 'model' => $model,
             ]);
         }

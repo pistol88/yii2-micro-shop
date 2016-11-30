@@ -13,7 +13,7 @@ use yii\bootstrap\Nav;
                 'url' => ['/microshop/category/index'],
             ],
             [
-                'label' => 'Поступление',
+                'label' => 'Поступления',
                 'url' => ['/microshop/incoming/index'],
             ]
         ],

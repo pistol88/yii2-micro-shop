@@ -20,6 +20,11 @@ class Incoming extends \yii\db\ActiveRecord
         ];
     }
 
+    public function getProduct()
+    {
+        return $this->hasOne(Product::className(), ['id' => 'product_id']);
+    }
+    
     public function attributeLabels()
     {
         return [
@@ -28,6 +33,7 @@ class Incoming extends \yii\db\ActiveRecord
             'product_id' => 'Товар',
             'amount' => 'Кол-во',
             'price' => 'Цена',
+            'content' => 'Комментарий',
         ];
     }
 }
