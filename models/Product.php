@@ -66,6 +66,14 @@ class Product extends \yii\db\ActiveRecord implements \pistol88\relations\interf
         return $this->id;
     }
     
+    public function setPrice($price)
+    {
+        $this->price = $price;
+        $this->save(false);
+        
+        return $this;
+    }
+    
     public function minusAmount($count)
     {
         $this->amount = $this->amount-$count;
