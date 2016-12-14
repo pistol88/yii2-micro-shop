@@ -110,6 +110,11 @@ class Product extends \yii\db\ActiveRecord implements \pistol88\relations\interf
         return $this->price;
     }
 
+    public function getPrice()
+    {
+        return $this->price;
+    }
+    
     public function getCartOptions()
     {
         $options = [];
