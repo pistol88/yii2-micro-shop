@@ -23,10 +23,10 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
     
-    <?php if($amount) { ?>
+    <?php if($totalAmount) { ?>
         <div class="summary">
             Всего товаров:
-            <?=$amount;?>
+            <?=$totalAmount;?>
             на сумму
             <?=$totalPrice;?> руб.
         </div>
