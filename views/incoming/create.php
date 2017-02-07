@@ -26,7 +26,7 @@ $this->registerJs(
 <div class="incoming-create">
     <div class="row">
         <div class="col-md-2">
-            <?= Html::a('Создать поступление', ['create'], ['class' => 'btn btn-success']) ?>
+            
         </div>
         <div class="col-md-10">
             <?=$this->render('../parts/menu');?>
