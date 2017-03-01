@@ -14,7 +14,5 @@ $this->params['breadcrumbs'][] = 'Обновить';
 
     <?= $this->render('_form', [
         'model' => $model,
-        'priceTypes' => $priceTypes,
-        'priceModel' => $priceModel,
     ]) ?>
 </div>
