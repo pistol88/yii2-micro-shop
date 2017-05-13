@@ -15,4 +15,9 @@ $this->params['breadcrumbs'][] = 'Обновить';
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
+    
+    <div>
+        <h3>Доп. поля</h3>
+        <?=\pistol88\field\widgets\Choice::widget(['model' => $model]);?>
+    </div>
 </div>
