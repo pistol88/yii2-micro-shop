@@ -15,6 +15,9 @@ class Product extends \yii\db\ActiveRecord implements \pistol88\relations\interf
                 'class' => 'pistol88\gallery\behaviors\AttachImages',
                 'mode' => 'gallery',
             ],
+            'field' => [
+                'class' => 'pistol88\field\behaviors\AttachFields',
+            ],
         ];
     }
     
